@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <link rel="stylesheet" href="styles.css">
+    <div class="box" id="heading">
+        <h1> <%= date %></h1>
+
+    </div>
+    
+    
+</head>
+<ul>
+    <div class="box">
+        <%for(var i=0;i<add.length;i++){%>
+            <%console.log(i)%>
+        <form action="/delete" method="post">
+        <div class="item">
+            <input type="checkbox" name="checkbox" value="<%=add[i]._id%>" >
+            <p><%=add[i].name%></p>
+            <button type="submit" class="del">
+                X
+            </button>
+
+        </div>
+        <input type="hidden" name="listName" value="<%=date%>"></input>
+    </form>
+         <%}%>
+         <form class="item" action="/" method="post" placeholder="type">
+            <input type="text" name="newitem">
+            <button type="submit" class="ad" name="list" value="<%=date%>">+</button>
+            </form>
+            
+
+    </div>
+    
+
+
+<body>
+    
+</body>
+<footer class="f">Developed by Debesh</footer>
+</html>
